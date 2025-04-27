@@ -1,69 +1,35 @@
-# ♻️ Reciclei - Sistema de Reciclagem
+# 📚 Sistema de Gerenciamento de Requerimentos
 
-**Reciclei** é uma aplicação web que conecta usuários, coletores e pontos de coleta com o objetivo de incentivar a reciclagem de resíduos sólidos urbanos. A plataforma permite o cadastro de usuários e coletores, gerenciamento de pontos de coleta, além de promover uma interação eficiente entre todos os envolvidos.
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-### 🧠 Backend
-- [Laravel 11](https://laravel.com/)
-- Eloquent ORM
-- API RESTful
-- Banco de dados MySQL/MariaDB (integrado ao Laravel)
-
-### 🎨 Frontend
-- [React 18](https://reactjs.org/)
-- Axios (para chamadas à API)
-- React Router (para navegação entre páginas)
-- Styled Components ou TailwindCSS (opcional)
+Este sistema tem como objetivo facilitar o processo de solicitação de requerimentos acadêmicos por meio de um **chatbot interativo**, oferecendo aos alunos uma experiência prática, intuitiva e centralizada.
 
 ---
 
-## 🧩 Funcionalidades Principais
+## 🧠 Funcionalidades
 
-### 👤 Usuário
-- Cadastro e login
-- Visualização de pontos de coleta por cidade/estado
-- Solicitação de coleta
-
-### 🚛 Coletor
-- Cadastro e login
-- Acesso às solicitações de coleta dos usuários
-- Confirmação de coleta realizada
-
-### 📍 Pontos de Coleta
-- Cadastro de novos pontos (realizado por administradores ou coletores autorizados)
-- Informações como endereço, materiais aceitos, horário de funcionamento
-- Visualização em mapa (em versão futura)
+- Chatbot interativo com respostas automáticas e direcionamento de opções.
+- Identificação do aluno por Nome completo, Matrícula e CPF.
+- Listagem e seleção de serviços disponíveis (ex: abono de faltas, cancelamento de matrícula, atualização de dados, solicitação de ementas, entre outros).
+- Upload de documentos comprobatórios, quando exigido pelo tipo de requerimento.
+- Encaminhamento automático dos dados para o setor responsável.
+- Mensagens de feedback ao usuário sobre o status da solicitação.
 
 ---
 
-## ⚙️ Como Rodar o Projeto
+## 🛠️ Tecnologias Utilizadas
 
-### 🖥️ Backend (Laravel)
+### Front-end
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/ecocoleta.git
-cd ecocoleta/backend
+### Back-end
+- [Laravel](https://laravel.com/)
+- [PostgreSQL](https://www.postgresql.org/)
 
-# Instale as dependências
-composer install
+---
 
-# Copie e configure o .env
-cp .env.example .env
-php artisan key:generate
+🤝 Colaboradores
 
-# Configure o banco de dados no .env
-# DB_DATABASE, DB_USERNAME, DB_PASSWORD
+# ...
 
-# Execute as migrações
-php artisan migrate
-
-# Inicie o servidor
-php artisan serve
-
-```
-
-### 💻 Equipe
+📄 Licença
+Projeto de uso acadêmico e institucional.
