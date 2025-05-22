@@ -1,4 +1,4 @@
-# 📚 Sistema de Gerenciamento de Requerimentos
+# 📚 Chatbot
 
 Este sistema tem como objetivo facilitar o processo de solicitação de requerimentos acadêmicos por meio de um **chatbot interativo**, oferecendo aos alunos uma experiência prática, intuitiva e centralizada.
 
@@ -17,17 +17,22 @@ Este sistema tem como objetivo facilitar o processo de solicitação de requerim
 
 ## 🛠️ Tecnologias Utilizadas
 
-### Front-end
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-
-### Back-end
-- [Laravel](https://laravel.com/)
-- [PostgreSQL](https://www.postgresql.org/)
+**front**: react + tailwind.css + ts
+**microservices**;  express + node.js +ts 
+**API(back)**: express + node.js + ts
+**banco**: postegres + Docker + sequelize
 
 ---
 
 🤝 Colaboradores
+
+- [Catarina Silva](mailto:catarinasouzasilvao@gmail.com)
+- [Dylan Borges](mailto:dylanborges06@gmail.com)
+- [Izabelle Alves](mailto:izabelle.alvesbl@gmail.com)
+- [Keila Isabelle](mailto:keiila_isabelle@outlook.com)
+- [Laura Esterfani](mailto:lauraestefa4@gmail.com)
+- [Rubens Lira](mailto:rubenslira371@gmail.com)
+- [Victor Gustavo](mailto:)
 
 # ...
 
