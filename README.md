@@ -17,13 +17,13 @@ Este sistema tem como objetivo facilitar o processo de solicitação de requerim
 
 ## 🛠️ Tecnologias Utilizadas
 
-**front**: react + tailwind.css + ts
+**Front**: react + tailwind.css + ts
 
 **microservices**;  express + node.js +ts 
 
-**API(back)**: express + node.js + ts
+**API(back)**: express + node.js + ts + Laravel
 
-**banco**: postegres + Docker + sequelize
+**Banco**: postegres + Docker + sequelize
 
 ---
 
