@@ -13,6 +13,10 @@ Este sistema tem como objetivo facilitar o processo de solicitação de requerim
 - Encaminhamento automático dos dados para o setor responsável.
 - Mensagens de feedback ao usuário sobre o status da solicitação.
 
+## 🖌️ Prototipação
+
+- FIGMA -> https://www.figma.com/design/ojfcwMJY6MUPVPZWVPk4IM/Projeto-Web-2?node-id=0-1&t=ioN6MWUQgooqXX0g-1
+
 ---
 
 ## 🛠 Tecnologias Utilizadas
