@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('anexos', function (Blueprint $table) {
+        Schema::create('att_types', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('protocolo');
-            $table->foreign('protocolo')->references('protocolo')->on('requerimentos')->onDelete('cascade');
-            $table->string('url_anexo');
-            $table->foreignId('tipo')->constrained('tipos_anexos')->onDelete('cascade');
+            $table->integer("type_req");
+            $table->string("name");
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('enrollments');
+        Schema::dropIfExists('att_types');
     }
 };
