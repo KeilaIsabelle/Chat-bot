@@ -4,18 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AttType extends Model
+class AttachmentType extends Model
 {
-    protected $fillable = ['name', 'request_type_id'];
+    protected $fillable = ['name', 'req_type'];
 
     public function requestType()
     {
-        return $this->belongsTo(TypeReqs::class);
+        return $this->belongsTo(RequestType::class);
     }
 
-    public function attachments()
+    public function attachment()
     {
         return $this->hasMany(Attachment::class);
     }
-    //
+
 }

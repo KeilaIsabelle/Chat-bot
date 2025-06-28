@@ -11,13 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('anexos', function (Blueprint $table) {
+        Schema::create('enrollments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('protocolo');
-            $table->foreign('protocolo')->references('protocolo')->on('requerimentos')->onDelete('cascade');
-            $table->string('url_anexo');
-            $table->foreignId('tipo')->constrained('tipos_anexos')->onDelete('cascade');
+            $table->string('enrollment');
+            $table->string('timetable');
+            $table->string('modality');
+            $table->enum('status', ['active', 'locked', 'finished']);
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+
+            $table->foreign('user_id')
+              ->references('id')
+              ->on('users');
         });
     }
 

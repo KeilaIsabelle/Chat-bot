@@ -11,15 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('requerimentos', function (Blueprint $table) {
+        Schema::create('requests', function (Blueprint $table) {
             $table->id();
             $table->string('status');
-            $table->string('matricula');
-            $table->text('observacoes')->nullable();
-            $table->unsignedBigInteger('protocolo')->unique();
-            $table->date('data_atual');
-            $table->foreignId('tipo_req')->constrained('tipos_reqs')->onDelete('cascade');
+            $table->string('enrollments');
+            $table->text('observations')->nullable();
+            $table->string('protocol')->unique();
+            $table->unsignedBigInteger('type');
             $table->timestamps();
+
+            $table->foreign('type')
+              ->references('id')
+              ->on('request_type');
         });
     }
 

@@ -6,16 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Request extends Model
 {
-    protected $fillable = ['status', 'matricula', 'observacoes', 'protocolo', 'data_atual', 'tipo_req'];
+    protected $fillable = [
+      'status',
+      'enrollment',
+      'observations',
+      'protocol',
+      'req_type'
+    ];
 
-    public function tipoRequerimento()
+    public function requestType()
     {
-        return $this->belongsTo(TypeReqs::class, 'tipo_req');
+        return $this->belongsTo(RequestType::class);
     }
 
-    public function anexos()
+    public function attachment()
     {
-        return $this->hasMany(Attachment::class, 'protocolo', 'protocolo');
+        return $this->hasMany(Attachment::class);
     }
-    //
 }

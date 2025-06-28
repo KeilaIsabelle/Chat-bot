@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('att_types', function (Blueprint $table) {
+        Schema::create('attachment_type', function (Blueprint $table) {
             $table->id();
-            $table->integer("type_req");
             $table->string("name");
+            $table->integer("req_type");
             $table->timestamps();
+
+            $table->foreign('req_type')
+              ->references('id')
+              ->on('request_type');
         });
     }
 
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('att_types');
+        Schema::dropIfExists('attachment_type');
     }
 };

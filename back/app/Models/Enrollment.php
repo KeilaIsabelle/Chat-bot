@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enrollment extends Model
 {
-    // use HasFactory;
-
     protected $fillable = [
         'enrollment',
         'timetable',
@@ -16,9 +14,6 @@ class Enrollment extends Model
         'user_id',
     ];
 
-    /**
-     * Um enrollment pertence a um usuário.
-     */
     public function user()
     {
         return $this->belongsTo(User::class);

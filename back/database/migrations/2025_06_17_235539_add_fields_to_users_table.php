@@ -15,7 +15,7 @@ return new class extends Migration
       $table->string('cpf')->unique();
       $table->string('phone')->nullable();
       $table->date('birthday')->nullable();
-      $table->enum('type_user', ['student', 'staff']);
+      $table->enum('user_type', ['student', 'staff']);
     });
   }
 

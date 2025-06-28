@@ -15,45 +15,40 @@ class UserController extends Controller
   }
 
   public function store(Request $request)
-{
-    // Validação dos dados
+  {
     $validated = $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|unique:users,email',
-        'password' => [
-            'required',
-            'string',
-            'confirmed',
-            Password::min(8)
-                ->mixedCase()    // Pelo menos 1 letra maiúscula e 1 minúscula
-                ->numbers()      // Pelo menos 1 número
-                ->symbols()     // Pelo menos 1 símbolo
-                ->uncompromised() // Verifica se a senha não foi vazada em breaches
-        ],
-        'cpf' => 'required|string|size:11|unique:users,cpf',
-        'birthday' => 'required|date',
-        'phone' => 'required|string|size:11',
-        'type_user' => 'required|in:student,staff' // Valores permitidos no enum
+      'name' => 'required|string|max:255',
+      'email' => 'required|email|unique:users,email',
+      'password' => [
+        'required',
+        'string',
+        'confirmed',
+        Password::min(8)
+          ->mixedCase()
+          ->numbers()
+          ->symbols()
+          ->uncompromised()
+      ],
+      'cpf' => 'required|string|size:11|unique:users,cpf',
+      'birthday' => 'required|date',
+      'phone' => 'required|string|size:11',
+      'user_type' => 'required|in:student,staff'
     ]);
 
-    // Criptografa a senha antes de salvar
     $validated['password'] = Hash::make($validated['password']);
 
-    // Cria o usuário no banco de dados
     $user = User::create($validated);
 
-    // Retorna resposta formatada (opcional)
     return response()->json([
-        'message' => 'Usuário criado com sucesso',
-        'user' => [
-            'id' => $user->id,
-            'name' => $user->name,
-            'email' => $user->email,
-            'type_user' => $user->type_user
-            // Não retornamos dados sensíveis como password/CPF
-        ]
-    ], 201); // HTTP 201 - Created
-}
+      'message' => 'Usuário criado com sucesso',
+      'user' => [
+        'id' => $user->id,
+        'name' => $user->name,
+        'email' => $user->email,
+        'user_type' => $user->type_user
+      ]
+    ], 201);
+  }
 
   public function show(User $user)
   {

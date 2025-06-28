@@ -6,16 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Attachment extends Model
 {
-     protected $fillable = ['protocol', 'url', 'attachment_type_id'];
+     protected $fillable = ['protocol', 'url', 'type'];
 
     public function request()
     {
-        return $this->belongsTo(Request::class, 'protocol', 'protocol');
+        return $this->belongsTo(Request::class);
     }
 
     public function attachmentType()
     {
-        return $this->belongsTo(AttType::class);
+        return $this->belongsTo(AttachmentType::class);
     }
-    //
 }

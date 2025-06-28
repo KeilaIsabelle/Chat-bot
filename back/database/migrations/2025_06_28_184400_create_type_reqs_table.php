@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('type_reqs', function (Blueprint $table) {
+        Schema::create('request_type', function (Blueprint $table) {
             $table->id();
             $table->string("name");
             $table->timestamps();
-
-           $table->foreignId('tipo_req')->constrained('tipos_reqs')->onDelete('cascade');
         });
     }
 
@@ -25,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('type_reqs');
+        Schema::dropIfExists('request_type');
     }
 };

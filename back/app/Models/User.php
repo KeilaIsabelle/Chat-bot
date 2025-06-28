@@ -24,7 +24,7 @@ class User extends Authenticatable
     'cpf',
     'birthday',
     'phone',
-    'type_user',
+    'user_type',
   ];
 
   /**

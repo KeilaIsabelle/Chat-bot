@@ -17,8 +17,12 @@ return new class extends Migration
             $table->integer("type");
             $table->timestamps();
 
-            $table->foreignId('attachment_type_id')->constrained()->onDelete('cascade');
-            $table->foreignId('request_id')->constrained()->onDelete('cascade');
+            $table->foreign('protocol')
+              ->references('protocol')
+              ->on('requests');
+            $table->foreign('type')
+              ->references('id')
+              ->on('attachment_type');
         });
     }
 
