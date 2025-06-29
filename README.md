@@ -17,6 +17,10 @@ Este sistema tem como objetivo facilitar o processo de solicitação de requerim
 
 - FIGMA -> https://www.figma.com/design/ojfcwMJY6MUPVPZWVPk4IM/Projeto-Web-2?node-id=0-1&t=ioN6MWUQgooqXX0g-1
 
+## Fluxo de opções do Chat-bot (opções e documentos necessários)
+
+- LINK PLANILHA -> https://docs.google.com/spreadsheets/d/1F_JUf1aNj5vUvLnLFt5BDot1pPZhfdctrPUuMeeKRFw/edit?usp=sharing
+
 ---
 
 ## 🛠 Tecnologias Utilizadas
