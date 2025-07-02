@@ -8,4 +8,12 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+
+Route::get('/', function () {
+    return response()->json([
+        'message' => 'API Laravel iniciada!',
+    ]);
+});
+
+
 Route::apiResource('users', UserController::class);
