@@ -27,8 +27,6 @@ Este sistema tem como objetivo facilitar o processo de solicitação de requerim
 
 *Front*: react + tailwind.css + ts
 
-*Microservices*:  express + node.js + ts 
-
 *API(back)*: Laravel + Sanctum
 
 *Banco*: postegres + Docker + sequelize
