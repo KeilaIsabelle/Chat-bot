@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('attachments', function (Blueprint $table) {
             $table->string("protocol");
             $table->string("URL");
-            $table->integer("type");
+            $table->unsignedBigInteger("type");  // Corrigido aqui
             $table->timestamps();
 
             $table->foreign('protocol')

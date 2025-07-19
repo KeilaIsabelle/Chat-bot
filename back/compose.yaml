@@ -1,17 +1,14 @@
-version: '3.8'
-
 services:
-  postgres:
-    image: postgres
-    container_name: chatBot
+  mysql:
+    image: mysql:8.0
+    container_name: chat-bot
     environment:
-      POSTGRES_USER: ${DB_USERNAME}
-      POSTGRES_PASSWORD: ${DB_PORT}
-      POSTGRES_DB: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
     ports:
-      - "${DB_PORT}:5432"
+      - "${DB_PORT}:3306"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/mysql
 
 volumes:
   pgdata:
