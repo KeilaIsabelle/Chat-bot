@@ -21,8 +21,8 @@ Route::get('/', function () {
 
 
 Route::apiResource('users', UserController::class);
-Route::apiResource('enrollment', EnrollmentController::class);
-Route::apiResource('attachment', AttachmentController::class);
-Route::apiResource('request', RequestController::class);
+Route::apiResource('enrollments', EnrollmentController::class);
+Route::apiResource('attachments', AttachmentController::class);
+Route::apiResource('requests', RequestController::class);
 Route::apiResource('typereqs', TypeReqsController::class);
 
